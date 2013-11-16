@@ -1,0 +1,167 @@
+Progress Bar V 1.0 ~
+Copyright (c) 2013 Vicky Gonsalves
+license.txt
+Contact +91- 8097598395, +91-9766222843
+
+
+************************************************************************************************************************
+*************************************************How To Use*************************************************************
+1. Include progressbar_v_1_min.js in the <head> of your html page.
+e.g
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0">
+    <title>Progress Bar Version 1</title>
+    <script type="text/javascript" src="js/progressbar_v_1_min.js"></script>
+</head>
+<body>
+</body>
+</html>
+
+
+2. Initialize the progress bar by adding following script in the <head> of your html page. Make sure you add id of element in the code for which you want to initialize progress bar.
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0">
+    <title>Progress Bar Version 1</title>
+    <script type="text/javascript" src="js/progressbar_v_1_min.js"></script>
+    <script>
+            document.addEventListener('DOMContentLoaded', init, false);
+            function init() {
+                var ProgressBar = new progressBar('body',{});
+            }
+    </script>
+</head>
+<body id='body'>
+<img src='someimage.jpg' />
+<div style="background: url(anotherimage.png)"></div>
+</body>
+</html>
+
+3. Thats it!
+
+
+
+************************************************************************************************************************
+*****************************************************Events*************************************************************
+
+1.  onProgress:
+
+    This Method is useful to get current progress of images being loaded.
+
+    Implementation:
+
+    ProgressBar.onProgress = function () {
+        console.log("Images Loaded:"+ProgressBar.imagesLoaded)
+        console.log("Images Not Loaded:"+ProgressBar.imagesNotLoaded)
+        console.log("Current Progress:"+ProgressBar.progress)
+    }
+
+
+
+2.  onLoad:
+
+    This method is useful to check if everything is loaded.
+
+    Implementation:
+
+    ProgressBar.onLoad = function () {
+        console.log("Load Finished");
+        console.log("Images Loaded:"+ProgressBar.imagesLoaded)
+        console.log("Images Not Loaded:"+ProgressBar.imagesNotLoaded)
+        console.log("Current Progress:"+ProgressBar.progress)
+    }
+
+
+3. onError:
+
+    This method is useful to check if any image is not loaded.
+
+    Implementation:
+
+    ProgressBar.onError = function () {
+        console.log("Images Not Loaded:"+ProgressBar.imagesNotLoaded)
+    }
+
+
+
+
+************************************************************************************************************************
+**********************************************Optional variables********************************************************
+
+
+1.  showLoader : true | false  (Boolean) (Optional)
+    Default: true
+    Use: This variable show and hide loading screen.
+
+
+2.  loaderImagePath: imagepath (String) (Optional)
+    Default:  ../loading.gif
+    Use: This variable is used to configure loading animation image's path
+
+
+
+3.  showLoadingText : true | false (Boolean) (Optional)
+    Default: true
+    Use: This variable is used to show and hide Loading text at the loading screen.
+
+
+4.  loadingText : Text (String) (Optional)
+    Default: Loading
+    Use: This variable is used to Configure Loading text message at the loading screen.
+
+
+5.  loadingTextClass : defaultclass (String) (Optional)
+    Default: null
+    Use: This variable is used to Configure class of Loading text message at the loading screen.
+
+
+6.  loaderStyle: opaqe | transparent (String) (Optional)
+    Default: opaqe
+    Use: This variable is used to Configure loading screen's transparency.
+
+
+7.  transparency: number  (Float) (Optional)
+    Default: 1
+    Use: This variable is used to Configure loading screen's transparency amount.
+
+
+8.  backgroundColor : colorcode (String) (Optional)
+    Default: #000
+    Use: This variable is used to Configure loading screen's background color.
+
+
+9.  initAnimation :  fadein | null   (String) (Optional)
+    Default: null
+    Use: This variable is used to Configure loading screen's initial animation.
+
+
+10. destroyAnimation :  fadeout | null   (String) (Optional)
+    Default: null
+    Use: This variable is used to Configure loading screen's destroy animation.
+
+
+11. initAnimationSpeed: number (int) (Optional)
+    Default: 10
+    Use: This variable is used to Configure loading screen's animation speed.
+
+
+12. log : true | false
+    Default: true
+    Use: This variable is used to enable disable log.
+
+
+
+
+
+
+
+
+
+
+
+
+

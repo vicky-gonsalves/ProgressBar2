@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<p><b>Progress Bar V 1.0 ~ by Vicky Gonsalves</b></p>
+
+<!--<p><b>Copyright (c) 2013 Vicky Gonsalves</b></p>-->
+
+<!--<p><b><a href="license.html">View License</a></b></p>-->
+
+<!--<p><b>Contact +91- 8097598395, +91-9766222843</b></p>-->
+
+<p><b>************************************************************************************************************************</b></p>
+
+<p><b>*************************************************How To Use**************************************************************</b></p>
+
+<p><b>1.</b> Include progressbar_v_1_min.js in the &lt;head&gt; of your html page.</p>
+
+<p>e.g</p>
+
+<p>&lt;!DOCTYPE HTML&gt;</p>
+
+<p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;</p>
+
+
+<p>&lt;title&gt;Progress Bar Version 1&lt;/title&gt;</p>
+
+<p>&lt;script type="text/javascript" src="js/progressbar_v_1_min.js"&gt;&lt;/script&gt;</p>
+
+<p>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;</p>
+
+<p>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+
+<p><b>2.</b> Initialize the progress bar by adding following script in the &lt;head&gt; of your html page. Make sure you add id of element in the code for which you want to initialize progress bar.</p>
+
+<p>&lt;!DOCTYPE HTML&gt;</p>
+
+<p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;</p>
+
+<p>&lt;meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0"&gt;</p>
+
+<p>&lt;title&gt;Progress Bar Version 1&lt;/title&gt;</p>
+
+<p>&lt;script type="text/javascript" src="js/progressbar_v_1_min.js"&gt;&lt;/script&gt;</p>
+
+<p>&lt;script&gt;</p>
+
+<p>document.addEventListener('DOMContentLoaded', init, false);</p>
+
+<p>function init() {</p>
+
+<p>var ProgressBar = new progressBar(<b>'main',{loaderImagePath: "loading.gif"</b>});</p>
+
+<p>}</p>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;/head&gt;</p>
+
+<p>&lt;body &gt;</p>
+<p>&lt;div id=<b>'main'</b> &gt;</p>
+
+<p>&lt;img src='someimage.jpg' /&gt;</p>
+
+
+<p>&lt;/div</b> &gt;</p>
+<p>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+
+<p><b>3.</b> Thats it!</p>
+
+<p><b>************************************************************************************************************************</b></p>
+
+<p><b>*****************************************************Events*************************************************************</b></p>
+
+<p><b>1.</b> <b>onProgress</b>:</p>
+
+<p>This Method is useful to get current progress of images being loaded.</p>
+
+<p>Implementation:</p>
+
+<p>ProgressBar.onProgress = function () {</p>
+
+<p>console.log("Images Loaded:"+ProgressBar.imagesLoaded)</p>
+
+<p>console.log("Images Not Loaded:"+ProgressBar.imagesNotLoaded)</p>
+
+<p>console.log("Current Progress:"+ProgressBar.progress)</p>
+
+<p>}</p>
+
+<p><b>2.</b> <b>onLoad</b>:</p>
+
+<p>This method is useful to check if everything is loaded.</p>
+
+<p>Implementation:</p>
+
+<p>ProgressBar.onLoad = function () {</p>
+
+<p>console.log("Load Finished");</p>
+
+<p>console.log("Images Loaded:"+ProgressBar.imagesLoaded)</p>
+
+<p>console.log("Images Not Loaded:"+ProgressBar.imagesNotLoaded)</p>
+
+<p>console.log("Current Progress:"+ProgressBar.progress)</p>
+
+<p>}</p>
+
+<p><b>3.</b> <b>onError</b>:</p>
+
+<p>This method is useful to check if any image is not loaded.</p>
+
+<p>Implementation:</p>
+
+<p>ProgressBar.onError = function () {</p>
+
+<p>console.log("Images Not Loaded:"+ProgressBar.imagesNotLoaded)</p>
+
+<p>}</p>
+
+<p><b>************************************************************************************************************************</b></p>
+
+<p><b>**************************************************Optional variables********************************************************</b></p>
+
+<p><b>1.</b> <b>showLoader</b> : true | false (Boolean) (Optional)</p>
+
+<p>Default: true</p>
+
+<p>Use: This variable show and hide loading screen.</p>
+
+<p><b>2. loaderImagePath</b>: imagepath (String) (Optional)</p>
+
+<p>Default: ../loading.gif</p>
+
+<p>Use: This variable is used to configure loading animation image's path</p>
+
+<p><b>3. showLoadingText</b> : true | false (Boolean) (Optional)</p>
+
+<p>Default: true</p>
+
+<p>Use: This variable is used to show and hide Loading text at the loading screen.</p>
+
+<p><b>4. loadingText</b> : Text (String) (Optional)</p>
+
+<p>Default: Loading</p>
+
+<p>Use: This variable is used to Configure Loading text message at the loading screen.</p>
+
+<p><b>5. loadingTextClass</b> : defaultclass (String) (Optional)</p>
+
+<p>Default: null</p>
+
+<p>Use: This variable is used to Configure class of Loading text message at the loading screen.</p>
+
+<p><b>6. loaderStyle</b>: opaqe | transparent (String) (Optional)</p>
+
+<p>Default: opaqe</p>
+
+<p>Use: This variable is used to Configure loading screen's transparency.</p>
+
+<p><b>7. transparency</b>: number (Float) (Optional)</p>
+
+<p>Default: 1</p>
+
+<p>Use: This variable is used to Configure loading screen's transparency amount.</p>
+
+<p><b>8. backgroundColor</b> : colorcode (String) (Optional)</p>
+
+<p>Default: #000</p>
+
+<p>Use: This variable is used to Configure loading screen's background color.</p>
+
+<p><b>9. initAnimation</b> : fadein | null (String) (Optional)</p>
+
+<p>Default: null</p>
+
+<p>Use: This variable is used to Configure loading screen's initial animation.</p>
+
+<p><b>10. destroyAnimation</b> : fadeout | null (String) (Optional)</p>
+
+<p>Default: null</p>
+
+<p>Use: This variable is used to Configure loading screen's destroy animation.</p>
+
+<p><b>11. initAnimationSpeed</b>: number (int) (Optional)</p>
+
+<p>Default: 10</p>
+
+<p>Use: This variable is used to Configure loading screen's animation speed.</p>
+
+<p><b>12. log</b> : true | false</p>
+
+<p>Default: true</p>
+
+<p>Use: This variable is used to enable disable log.</p>
+
+</body>
+</html>

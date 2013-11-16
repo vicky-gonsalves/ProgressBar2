@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0">
+    <title>Progress Bar Version 2 - By Vicky Gonsalves</title>
+    <script type="text/javascript" src="js/progressbar_v_2.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', init, false);
+        function init() {
+            var progressBar = new ProgressBar('main',
+                    {
+                        loaderImagePath: "loading.gif"
+//                        showLoader: true,
+//                        showLoadingText: true
+//                        loadingText: 'Loading',
+//                        loadingTextClass: 'LoadingClass',
+//                        loaderStyle: 'transparent',                 //Can be transparent or opaque
+//                        backgroundColor: '#000',
+//                        initAnimation: 'fadein',
+//                        destroyAnimation: 'fadeout',
+//                        initAnimationSpeed: 10,
+//                        log: true
+                    }
+            );
+
+            progressBar.onProgress = function () {
+//                console.log(progressBar.progress)
+//                alert(progressBar.imagesLoaded)
+//                alert(progressBar.progress)
+            }
+            progressBar.onError = function () {
+//                alert(progressBar.imagesNotLoaded)
+//                alert(progressBar.imagesLoaded)
+//                alert(progressBar.progress)
+            }
+            progressBar.onLoad = function () {
+//                alert('Load Finished')
+//                alert(progressBar.imagesNotLoaded)
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #main {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background: url("Great-Mountains-mountains-and-waterfalls-9841962-1920-1440.jpg");
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .popup {
+            width: 90%;
+            height: 80%;
+            top: 10%;
+            left: 5%;
+            position: fixed;
+        }
+
+        .guide {
+            width: 90%;
+            height: 80%;
+            top: 20%;
+            left: 10%;
+            position: fixed;
+        }
+
+        .Progressbar {
+            width: 90%;
+            height: 80%;
+            position: fixed;
+            text-align: center;
+            top: 10%;
+        }
+
+        .transparent-bg {
+            width: 90%;
+            height: 80%;
+            background: #ffffff;
+            opacity: 0.7;
+            -webkit-border-radius: 20px;
+            position: fixed;
+        }
+
+        .test2 {
+            width: 300px;
+            height: 300px;
+            background-size: 100% 100%;
+        }
+
+        .LoadingClass {
+            margin-top: 20px;
+            color: green;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .margin {
+            margin-left: 5%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div class="wrapper">
+        <div class="popup">
+            <div class="transparent-bg"></div>
+            <div class="Progressbar"><h1>Progress Bar Version 2</h1></div>
+            <div class="guide">
+                <div>
+                    <h2>How to implement:</h2>
+                </div>
+                <div class="margin">
+                    <ul>
+                        <li>Get the script from <a target="_blank"
+                                                   href="http://mobile.i-xltech.com/progressbar_v_2/js/progressbar_v_2.min.js">here</a>
+                    <pre class="bold">
+                    </pre>
+                        </li>
+                        <li>Add this script in <strong>&lt;head&gt;</strong> tag:
+                    <pre class="bold">
+&lt;script type="text/javascript" src="js/progressbar_v_2.min.js"&gt;&lt;/script&gt;
+                    </pre>
+                        </li>
+                        <li>Initialize ProgressBar :
+                    <pre class="bold">
+document.addEventListener('DOMContentLoaded', init, false);
+function init() {
+     var progressBar = new ProgressBar('main',{loaderImagePath: "loading.gif"});
+}
+                    </pre>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="test2"></div>
+    </div>
+</div>
+</body>
+</html>
