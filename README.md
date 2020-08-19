@@ -22,7 +22,17 @@ Download `progressbar_v_2.min.js` from `js` directory of the project
 </html>
 ```
 
-**2. Initialize the progress bar by adding following script in the <head> of your html page. Make sure you add id of element in the code for which you want to initialize progress bar.**
+**2. Wrap the content for which you want to show loading with id `main`**
+```
+<div id='main'>
+ <img src=".../someimage"/>
+ <img src=".../someimage"/>
+ <img src=".../someimage"/>
+ <img src=".../someimage"/>
+</div>
+```
+
+**3. Initialize the progress bar by adding following script in the <head> of your html page. Make sure you add id of element in the code for which you want to initialize progress bar.**
 
 ```
 <script>
