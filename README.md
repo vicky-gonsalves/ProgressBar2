@@ -1,6 +1,9 @@
 # ProgressBar2
 Images Loader Plugin for Javascript
 
+### Installation
+Download `progressbar_v_2.min.js` from `js` directory of the project
+
 
 ### How to use
 
