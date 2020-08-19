@@ -45,7 +45,7 @@ Download `progressbar_v_2.min.js` from `js` directory of the project
 
 **Note: `loading.gif` is the placeholder image to show page loading progress. You can use your favorite image here.**
 
-**3. Thats it!**
+**4. Thats it!**
 
 
 
