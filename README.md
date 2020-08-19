@@ -7,7 +7,7 @@ Download `progressbar_v_2.min.js` from `js` directory of the project
 
 ### How to use
 
-**1. Include progressbar_v_1_min.js in the `<head>` of your html page.**
+**1. Include progressbar_v_2_min.js in the `<head>` of your html page.**
   
 ```
 <!DOCTYPE HTML>
